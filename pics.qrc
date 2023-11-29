@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/system">
+        <file>sources/pics/BattleDeck.jpg</file>
+        <file>sources/pics/depot.jpg</file>
+    </qresource>
+</RCC>
