@@ -26,6 +26,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         pics.qrc
         card.h card.cpp
         player.h player.cpp
+        battlefield.h battlefield.cpp
 
 
     )

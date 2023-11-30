@@ -50,10 +50,10 @@ class Deck
 public:
     Deck();
     ~Deck();
-    Card *card_list;
+    // Card *card_list;
 
-    uint8_t get_deck_number();
-    uint8_t get_deck_top();
+    // uint8_t get_deck_number();
+    // uint8_t get_deck_top();
 private:
     uint8_t deck_top;
     uint8_t deck_bottom;

@@ -2,5 +2,7 @@
     <qresource prefix="/system">
         <file>sources/pics/BattleDeck.jpg</file>
         <file>sources/pics/depot.jpg</file>
+        <file>sources/pics/player1.jpg</file>
+        <file>sources/pics/player2.jpg</file>
     </qresource>
 </RCC>
