@@ -23,6 +23,7 @@ public:
 private slots:
     void on_start_game_clicked();
 
+
 private:
     Ui::MainWindow *ui;
     Battlefield *battlefield;

@@ -27,6 +27,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         card.h card.cpp
         player.h player.cpp
         battlefield.h battlefield.cpp
+        cards/cards1.h
+
 
 
     )
