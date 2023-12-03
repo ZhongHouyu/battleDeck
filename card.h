@@ -63,6 +63,7 @@ public:
     ~Card();
     Card_Type card_type;                // type of this card
     QString card_unique_number;         // card unique numeber pushlished by Mr.Qiao
+    QString card_name;
     Faction card_faction;
     Card_Color card_color;
     uint8_t card_max;                   // max number of this card in one deck

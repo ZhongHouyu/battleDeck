@@ -19,6 +19,7 @@ void ClassFactory::registClass(QString name, PTRCreateObject method){
 
 
 Card::Card() {
+    this->card_unique_number = "0";
     this->health = 0;
     this->attack = 0;
 }

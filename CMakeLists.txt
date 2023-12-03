@@ -32,6 +32,16 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         cards/tactics.h cards/tactics.cpp
         cards/all_cards.h
         deck.h deck.cpp
+        cards/trooptrimming.h cards/trooptrimming.cpp
+        cards/pray.h cards/pray.cpp
+        cards/evalution.h cards/evalution.cpp
+        cards/commandments.h cards/commandments.cpp
+        cards/increaseoutput.h cards/increaseoutput.cpp
+        cards/fraud.h cards/fraud.cpp
+        window_my_deck.h window_my_deck.cpp window_my_deck.ui
+        card_ui.h card_ui.cpp
+
+
 
 
 
