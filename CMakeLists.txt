@@ -28,6 +28,10 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         player.h player.cpp
         battlefield.h battlefield.cpp
         cards/cards1.h
+        cards/card2.h cards/card2.cpp
+        cards/tactics.h cards/tactics.cpp
+        cards/all_cards.h
+        deck.h deck.cpp
 
 
 

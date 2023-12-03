@@ -1,7 +1,38 @@
 #ifndef CARD_H
 #define CARD_H
+#include <map>
 #include <stdint.h>
 #include <QString>
+#include <QList>
+#include <QPixmap>
+#define REGISTER(className)                                             \
+    className* objectCreator##className(){                              \
+        return new className;                                           \
+    }                                                                   \
+    RegisterAction g_creatorRegister##className(                        \
+        #className,(PTRCreateObject)objectCreator##className);
+
+typedef void* (*PTRCreateObject)(void);  // a callback to new different cards
+
+
+class ClassFactory{
+private:
+    std::map<QString, PTRCreateObject> m_classMap ;
+    ClassFactory(){};
+public:
+    void* getClassByName(QString className);
+    void registClass(QString name, PTRCreateObject method);
+    static ClassFactory& getInstance();
+};
+
+
+
+class RegisterAction{
+public:
+    RegisterAction(QString className,PTRCreateObject ptrCreateFn){
+        ClassFactory::getInstance().registClass(className,ptrCreateFn);
+    }
+};
 
 typedef enum Card_Type{
     basic               = 0x00,
@@ -9,7 +40,6 @@ typedef enum Card_Type{
     special_chessman    = 0x02,
     skill               = 0x03,
     majic               = 0x04,
-
 
 }Card_Type;
 
@@ -31,33 +61,19 @@ class Card
 public:
     Card();
     ~Card();
-    Card_Type card_type;                // name of this card
+    Card_Type card_type;                // type of this card
     QString card_unique_number;         // card unique numeber pushlished by Mr.Qiao
     Faction card_faction;
     Card_Color card_color;
     uint8_t card_max;                   // max number of this card in one deck
-
+    uint16_t health;
+    uint16_t attack;
+    QPixmap card_pix_path;
     uint16_t get_health();
     uint16_t get_attack();
 private:
-    uint16_t health;
-    uint16_t attack;
+
 };
 
-
-class Deck
-{
-public:
-    Deck();
-    ~Deck();
-    // Card *card_list;
-
-    // uint8_t get_deck_number();
-    // uint8_t get_deck_top();
-private:
-    uint8_t deck_top;
-    uint8_t deck_bottom;
-    uint8_t deck_number;
-};
 
 #endif // CARD_H

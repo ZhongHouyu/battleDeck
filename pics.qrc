@@ -5,4 +5,7 @@
         <file>sources/pics/player1.jpg</file>
         <file>sources/pics/player2.jpg</file>
     </qresource>
+    <qresource prefix="/cards">
+        <file>sources/pics/cards/BETA001.jpg</file>
+    </qresource>
 </RCC>

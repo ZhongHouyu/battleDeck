@@ -1,14 +1,15 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include "card.h"
+
+#include "deck.h"
 
 class Player
 {
 public:
     Player();
     ~Player();
-    // Deck *deck;
+    Deck *deck;
     uint8_t draw_card();
     uint16_t get_health();
 
