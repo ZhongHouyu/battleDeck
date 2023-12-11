@@ -2,7 +2,8 @@
 
 TroopTrimming::TroopTrimming() {
     card_type = basic;
-    card_name = "TroopTrimming";
+    // card_name = "TroopTrimming";
+    card_name = "整修";
     card_unique_number = "BETA002";
     card_faction = neutral;
     card_color = gray;

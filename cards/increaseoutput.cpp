@@ -2,7 +2,8 @@
 
 IncreaseOutput::IncreaseOutput() {
     card_type = basic;
-    card_name = "IncreaseOutput";
+    // card_name = "IncreaseOutput";
+    card_name = "增产";
     card_unique_number = "BETA006";
     card_faction = neutral;
     card_color = gray;

@@ -2,7 +2,8 @@
 
 Fraud::Fraud() {
     card_type = basic;
-    card_name = "Fraud";
+    // card_name = "Fraud";
+    card_name = "欺诈";
     card_unique_number = "BETA007";
     card_faction = neutral;
     card_color = gray;

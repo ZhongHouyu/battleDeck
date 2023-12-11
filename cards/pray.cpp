@@ -2,7 +2,8 @@
 
 Pray::Pray() {
     card_type = basic;
-    card_name = "Pray";
+    // card_name = "Pray";
+    card_name = "祈祷";
     card_unique_number = "BETA003";
     card_faction = neutral;
     card_color = gray;

@@ -32,7 +32,7 @@ void Window_my_deck::show_deck(QWidget *parent){
 
     QList<Card*>::iterator i;
     int width = 150;
-    int height = -80;
+    int height = -180;
     int cnt = 0;
     if(nullptr==player){
         return;
@@ -49,6 +49,10 @@ void Window_my_deck::show_deck(QWidget *parent){
         cui->card_name->setText((*i)->card_name);
         cui->card_health->setText(QString(QString::number((*i)->health)));
         cui->card_attack->setText(QString(QString::number((*i)->attack)));
+        if(basic ==(*i)->card_type){    // 基础牌不显示攻击生命值
+            cui->card_health->hide();
+            cui->card_attack->hide();
+        }
          // 饱满填充
         cui->card_pic->setPixmap((*i)->card_pix_path.scaled(CARD_WIDTH-20, CARD_HEIGHT-60, Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
         cui->card_health->setText(QString((*i)->health));
@@ -58,13 +62,13 @@ void Window_my_deck::show_deck(QWidget *parent){
         cui->card_health->setFixedSize(40,30);
         cui->card_attack->setFixedSize(40,30);
         cui->card_bottom_surface->setStyleSheet("QLabel{border:1px solid rgb(0, 0, 0);}");
-        cui->card_pic->setStyleSheet("QLabel{border:1px solid rgb(0, 0, 0);}");
+        cui->card_pic->setStyleSheet("QLabel{border:1px solid rgb(255, 255, 255);}");
         cui->card_name->setStyleSheet("QLabel{border:1px solid rgb(0, 0, 0);}");
         cui->card_health->setStyleSheet("QLabel{border:1px solid rgb(0, 0, 0);}");
         cui->card_attack->setStyleSheet("QLabel{border:1px solid rgb(0, 0, 0);}");
         QFont font ( "Microsoft YaHei", 8, 50);
          cui->card_name->setFont(font);
-        int _width =width + cnt*(CARD_WIDTH+20);
+        int _width =width + cnt*(CARD_WIDTH);
         cui->card_bottom_surface->move(_width,height);
         cui->card_name->move(cui->card_bottom_surface->pos().x(),cui->card_bottom_surface->pos().y());
         cui->card_pic->move(cui->card_name->pos().x()+10,cui->card_name->pos().y()+30);

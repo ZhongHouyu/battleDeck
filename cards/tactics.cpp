@@ -2,7 +2,8 @@
 
 Tactics::Tactics() {
     card_type = basic;
-    card_name = "Tactics";
+    // card_name = "Tactics";
+    card_name = "战术";
     card_unique_number = "BETA001";
     card_faction = neutral;
     card_color = gray;
